@@ -1,59 +1,47 @@
-.pagination{
-  display:flex;
-  align-items: center;
-  background: #fff;
-  color: #383838;
-  padding: 10px 40px;
-  border-radius: 6px;
-}
-.pagination ul{
-  margin: 20px 30px;
-}
-.pagination ul li{
-  display: inline-block;
-  margin: 0 10px;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+.simple-pagination ul {
+  padding: 0;
+  list-style: none;
   text-align: center;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 45px;
-  cursor: pointer;
-  background-position: 0 -45px;
-  transition: background-position 0.5s;
+  margin-left: 10px;
 }
-.pagination ul li a{
+.simple-pagination li {
+  display: inline-block;
+  margin: 2px;
+}
+.simple-pagination li a,
+.simple-pagination li span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  text-align: center;
+
   text-decoration: none;
-  
+  color: #252525;
+  border-radius: 4px;
+  margin: 5px;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, .1), 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all ls ease;
 }
-.pagination ul li.active{
+.simple-pagination li a:hover {
+  background: #000;
   color: #fff;
-  background-image: linear-gradient(#ff4568,#ff4568 );
-  background-repeat: no-repeat;
-  background-position:0 0 ;
+}
+.simple-pagination .current{
+  color: #fff;
+  background: #000;
+  border-color: rgba(255, 255, 255);
+  border: 1px solid;
+  cursor: pointer;
+}
+.simple-pagination .prev.current,
+.simple-pagination .next.current {
+  background: #222;
+  border:none;
 }
 
-.btn1, .btn2{
-  display: inline-flex;
-  align-items: center;
-  font-size: 22px;
-  font-weight: 500;
-  color: #383838;
-  background: transparent;
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
-.btn1 img{
-  width: 24px;
-  margin-right: 15px;
-}
-.btn2 img{
-  width: 24px;
-  margin-left: 15px;
-  transform: rotate(180deg);
-}
+
 
 /* DEV JOB */
 
@@ -763,6 +751,7 @@ textarea.input {
   padding: 5%;
   background: #fff;
   z-index: 10;
+  
 }
 
 .post .post-img {
