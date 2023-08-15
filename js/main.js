@@ -113,7 +113,11 @@ s0.parentNode.insertBefore(s1,s0);
   });
 
 
-  
+  function PopUp(){
+    document.getElementById('ac-wrapper').style.display="none"; 
+}
+
+
     
   
   
