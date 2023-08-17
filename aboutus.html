@@ -23,7 +23,100 @@
 <script src="kit.fontawesome.com/6e8150c620.html" crossorigin="anonymous"></script>
 
 
+<style>
+  
+  
 
+.container-abt {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #555;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.mission, .value {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Mobile version */
+@media screen and (max-width: 767px) {
+  /* Adjust font size and padding for smaller screens */
+  h1 {
+    font-size: 24px;
+  }
+
+  h2, h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .container-abt {
+    padding: 10px;
+  }
+
+  .mission, .value {
+    padding: 10px;
+  }
+
+  /* Modify flex layout for values */
+  .values {
+    flex-direction: column;
+  }
+
+  .value {
+    margin: 10px 0;
+  }
+}
+
+/* Tablet version */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Adjust font size and padding for tablet screens */
+  h1 {
+    font-size: 32px;
+  }
+
+  h2, h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .container-abt {
+    padding: 30px;
+  }
+
+  .mission, .value {
+    padding: 30px;
+  }
+
+  /* Modify flex layout for values */
+  .values {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .value {
+    flex: 1 1 calc(33.33% - 20px);
+    margin: 10px;
+  }
+}
+
+</style>
 </head>
 
 
@@ -80,6 +173,8 @@
 <li><a href="aboutus.html" target="_parent">About Us</a></li>
 <li><a href="contactus.html" target="_blank">Contact Us</a></li>
 <li><a href="advertise.html" target="_blank">Advertise</a></li>
+<li><a href="sitemappage.html" target="_blank">Sitemap</a></li>
+
 </ul>
 
 </div>
@@ -99,6 +194,9 @@
 <li><a href="aboutus.html" target="_parent">About Us</a></li>
 <li><a href="contactus.html" target="_blank">Contact Us</a></li>
 <li><a href="advertise.html" target="_blank">Advertise</a></li>
+<li><a href="career.html" target="_blank">Career</a></li>
+<li><a href="sitemappage.html" target="_blank">Sitemap</a></li>
+
 </ul>
 <button class="nav-close nav-aside-close"><span></span></button>
 </div>
@@ -107,8 +205,43 @@
 
 </header>
 
+<div class="container-abt">
+  <h1>About DevJob</h1>
+  <p>Welcome to DevJob - Your Gateway to Tech Careers</p>
 
-<div class="contact_us">
+  <div class="mission">
+    <h2>Our Mission</h2>
+    <p>Our mission is to bridge the gap between talented tech professionals and companies that are shaping the future. We're dedicated to providing reliable, up-to-date job information and resources that enable job seekers to make informed decisions about their careers.</p>
+  </div>
+
+  <div class="values">
+    <div class="value">
+      <h3>Unparalleled Tech Insights</h3>
+      <p>DevJob is more than a job listing platform. Our team of experts curates and delivers in-depth articles, trends, and news that keep you at the forefront of technological advancements.</p>
+    </div>
+    <div class="value">
+      <h3>Tailored Job Matching</h3>
+      <p>Our advanced matching algorithms ensure that job seekers are connected with positions that align with their skills, experience, and aspirations.</p>
+    </div>
+    <div class="value">
+      <h3>Employer-First Approach</h3>
+      <p>DevJob offers a seamless platform for companies to showcase their culture and opportunities. Our commitment to quality ensures that employers find the perfect fit for their teams.</p>
+    </div>
+  </div>
+
+  <h2>Our Promise</h2>
+  <ul>
+    <li>Accuracy: We deliver accurate and up-to-date job information to help you make well-informed decisions.</li>
+    <li>Accessibility: Our platform is user-friendly and accessible, ensuring a smooth experience for everyone.</li>
+    <li>Community: DevJob is a hub for tech enthusiasts. Join our community to connect, learn, and grow together.</li>
+  </ul>
+
+  <h2>Join Us in Shaping the Future</h2>
+  <p>Whether you're a job seeker ready to take the next step or an employer seeking exceptional talent, DevJob is here to support you. Explore our platform, engage with our community, and embark on a journey towards a brighter tech future.</p>
+  <p><strong>Discover Opportunities. Embrace Possibilities. Build Your Future with DevJob.</strong></p>
+</div>
+
+<!-- <div class="contact_us">
   <div class="responsive-container-block bigContainer">
     <div class="responsive-container-block Container">
       <div class="responsive-cell-block wk-desk-5 wk-ipadp-4 wk-tab-12 wk-mobile-12">
@@ -122,7 +255,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 
@@ -180,7 +313,9 @@
     <li><a href="aboutus.html" target="_parent">About Us</a></li>
     <li><a href="contactus.html" target="_blank">Contact Us</a></li>
     <li><a href="advertise.html" target="_blank">Advertise</a></li>
-    <li><a href="#">Privacy</a></li>
+    <li><a href="privacy.html" target="_blank">Privacy</a></li>
+    <li><a href="Disclaimerpage.html" target="_blank">Disclaimer</a></li>
+
     </ul>
     </div>
     <div class="col-md-6 col-md-pull-6">
