@@ -913,24 +913,29 @@ textarea.input {
 \*----------------------------*/
 
 .hot-post {
+  display:flex;
   padding: 0 15px;
 }
 
 .hot-post .hot-post-left {
+  display:flex;
   padding-right: 0px;
   padding-left: 0px;
 }
 
 .hot-post .hot-post-right {
+  
   padding-right: 0;
   padding-left: 5px;
 }
 
 .hot-post .post {
+  display:flex;
   margin-bottom: 7px;
 }
 
 .hot-post {
+  display:flex;
   margin-bottom: 25px;
 }
 
