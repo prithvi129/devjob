@@ -1254,57 +1254,60 @@
 </div>
 </div>
 </footer>
+<div class="neo-modal-overlay">
+  <div class="neo-modal">
+    <div class="neo-glass">
+      <div class="header">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#00f2ff"/></svg>
+        <h1>We'll Be Back Soon</h1>
+      </div>
+      <p class="sub">Our developers are brewing something amazing. Hang tight.</p>
+      <div class="countdown" id="countdown">Loading...</div>
+      <button class="neo-btn" onclick="closeNeoModal()">Okay, Cool</button>
+    </div>
+  </div>
+</div>
 <script>
-    var form = document.getElementById("form");
-  form.addEventListener("submit", e => {
-    e.preventDefault();
-    fetch(form.action, {
-        method : "POST",
-        body: new FormData(document.getElementById("form")),
-    }).then(
-        response => response.json()
-    ).then((html) => {
-      // you can put any JS code here
-      
-    });
-  });
+function closeNeoModal() {
+  document.querySelector(".neo-modal-overlay").style.display = "none";
+}
 
-  var form = document.getElementById("sheetdb-form");
-  form.addEventListener("submit", e => {
-    e.preventDefault();
-    fetch(form.action, {
-        method : "POST",
-        body: new FormData(document.getElementById("sheetdb-form")),
-    }).then(
-        response => response.json()
-    ).then((html) => {
-      // you can put any JS code here
-      
-    });
-  });
-</script>
-<script>
-    const search = ()=>{
-        const searchbar = document.getElementById("searchbar").value.toUpperCase();
-        const jobitems = document.getElementById("company")
-        const jobcard = document.querySelectorAll(".job-card");
-        const cname = jobitems.getElementsByTagName("a");
-        
-        for (var i = 0; i < cname.length; i++){
-            let match = jobcard[i].getElementsByTagName('a')[0];
+// Countdown
+window.addEventListener('load', () => {
+  const countdownEl = document.getElementById("countdown");
+  const oneWeek = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds
+  const target = new Date().getTime() + oneWeek; // 1 week from now
 
-            if (match){
-                let textvalue = match.textContent || match.innerHTML
+  const update = () => {
+    const now = new Date().getTime();
+    const distance = target - now;
 
-                if (textvalue.toLocaleUpperCase().indexOf(searchbar) > -1){
-                    jobcard[i].style.display = "";
-
-                }else{
-                    jobcard[i].style.display = "none";
-                }
-            }
-        }
+    if (distance <= 0) {
+      countdownEl.innerHTML = "Launching shortly...";
+      return;
     }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdownEl.innerHTML = `⏳ ${days}d ${hours}h ${mins}m ${secs}s remaining`;
+    requestAnimationFrame(update);
+  };
+
+  update();
+
+  // Voice intro (Jarvis-style)
+  const msg = "Welcome to Dev Job Search. Our engineers are upgrading the system for a better experience.";
+  if ('speechSynthesis' in window) {
+    const utter = new SpeechSynthesisUtterance(msg);
+    utter.lang = 'en-US';
+    utter.pitch = 1.2;
+    utter.rate = 0.92;
+    speechSynthesis.speak(utter);
+  }
+});
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
