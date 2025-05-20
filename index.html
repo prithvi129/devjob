@@ -1263,7 +1263,7 @@
       </div>
       <p class="sub">Our developers are brewing something amazing. Hang tight.</p>
       <div class="countdown" id="countdown">Loading...</div>
-      <button class="neo-btn" onclick="closeNeoModal()">Okay, Cool</button>
+      <button class="neo-btn" onclick="">Okay, Cool</button>
     </div>
   </div>
 </div>
@@ -1317,26 +1317,7 @@ window.addEventListener('load', () => {
 <script src="js/main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
-<script>
-    
-        var items = $('.job-card');
-        var numItems = items.length;
-        var perPage = 9;
 
-        items.slice(perPage).hide();
-
-        $('#pagination-container').pagination({
-            items: numItems,
-            itemsOnPage: perPage,
-            prevText: "<",
-            nextText: ">",        
-            onPageClick : function (pageNumber){
-                var showFrom = perPage * (pageNumber-1);
-                var showTo = showFrom + perPage;
-                items.hide().slice(showFrom, showTo).show();
-            }
-        })    
-</script>
 </body>
 </html>
 
